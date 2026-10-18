@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio | Isma Adelia Argi Nugraha</title>
+  <meta name="description" content="Web portofolio Isma Adelia Argi Nugraha, mahasiswi S1 Pendidikan Teknologi Informasi UNESA.">
+
+  <!-- Google Fonts: Fredoka (judul) + Nunito (isi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <nav aria-label="Navigasi utama">
+      <a class="brand" href="#home">Adelia ✿</a>
+      <ul>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Kemampuan</a></li>
+        <li><a href="#experience">Pengalaman</a></li>
+        <li><a href="#projects">Project</a></li>
+        <li><a href="#achievement">Achievement</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrap">
+
+    <!-- HOME / HERO -->
+    <section id="home">
+      <div class="hero-card">
+        <span class="hello">Halo, salam kenal!</span>
+        <h1>Saya Isma Adelia Argi Nugraha</h1>
+        <p class="role">Selamat datang di portofolio saya. Saya mahasiswi Pendidikan Teknologi Informasi UNESA yang berfokus pada pengembangan web, teknologi pendidikan, serta penyusunan media pembelajaran digital yang interaktif dan mudah dipahami.</p>
+        <a class="btn" href="#projects">Lihat project</a>
+        <a class="btn alt" href="#contact">Hubungi saya</a>
+      </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section class="panel" id="about">
+      <h2>Tentang saya</h2>
+      <div class="about">
+        <div class="photo" id="photo">
+          <!-- Taruh foto kamu di assets/foto.jpg -->
+          <img src="assets/foto.jpg" alt="Foto Isma Adelia Argi Nugraha">
+        </div>
+        <div>
+          <p>Mahasiswi S1 Pendidikan Teknologi Informasi UNESA berlatar belakang Teknik Komputer dan Jaringan ini memadukan keahlian teknis IT dengan landasan pedagogik serta desain instruksional. Saya antusias menggabungkan teknologi dan pendidikan untuk menciptakan media pembelajaran interaktif yang efektif dan siap berkolaborasi dalam berbagai proyek.</p>
+          <dl class="identity">
+            <div><dt>Nama</dt><dd>Isma Adelia Argi Nugraha</dd></div>
+            <div><dt>NIM</dt><dd>26050974020</dd></div>
+            <div><dt>Prodi</dt><dd>S1 Pendidikan Teknologi Informasi</dd></div>
+            <div><dt>Kampus</dt><dd>Universitas Negeri Surabaya</dd></div>
+            <div><dt>Latar belakang</dt><dd>Teknik Komputer dan Jaringan</dd></div>
+            <div><dt>Fokus saat ini</dt><dd>Pengembangan web dan media pembelajaran digital</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEMAMPUAN (diisi dari script.js) -->
+    <section class="panel" id="skills">
+      <h2>Kemampuan</h2>
+      <div class="skills" id="skill-list"></div>
+    </section>
+
+    <!-- PENGALAMAN -->
+    <section class="panel" id="experience">
+      <h2>Pengalaman</h2>
+      <ul class="timeline">
+        <li>
+          <h3>Sales &amp; Customer Service, Astracom Jaya</h3>
+          <p class="date">Juli 2024 - November 2024</p>
+          <p>Melayani kebutuhan dan menangani keluhan pelanggan secara efektif, menerapkan teknik up-selling untuk mengoptimalkan target penjualan harian, serta membantu operasional toko.</p>
+        </li>
+        <li>
+          <h3>Kasir Restoran, Bakmie Jono</h3>
+          <p class="date">Maret 2026 - Mei 2026</p>
+          <p>Bertanggung jawab atas operasional mesin kasir dan akurasi transaksi harian, mengelola antrean pelanggan pada jam sibuk dengan cepat, serta menjaga efisiensi pelayanan.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PROJECT (diisi dari script.js) -->
+    <section class="panel" id="projects">
+      <h2>Project</h2>
+      <div class="projects" id="project-list"></div>
+    </section>
+
+    <!-- ACHIEVEMENT (diisi dari script.js) -->
+    <section class="panel" id="achievement">
+      <h2>Achievement</h2>
+      <div class="achievements" id="achievement-list"></div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="panel" id="contact">
+      <h2>Kontak</h2>
+      <p class="contact-intro">Saya terbuka untuk peluang magang, proyek kolaborasi media pembelajaran, tutor/mentoring Informatika, maupun diskusi seputar EdTech.</p>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:26050974020@mhs.unesa.ac.id">26050974020@mhs.unesa.ac.id</a></li>
+        <li>GitHub: <a href="https://github.com/adeeeelia">github.com/adeeeelia</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/isma-adelia-argi-nugraha">linkedin.com/in/isma-adelia-argi-nugraha</a></li>
+      </ul>
+      <a class="btn" href="assets/CV_Isma_Adelia.pdf" download>Unduh CV</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>&copy; <span id="year"></span> ISMA ADELIA ARGI NUGRAHA ✿ Dibuat dengan semangat</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

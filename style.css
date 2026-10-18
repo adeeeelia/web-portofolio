@@ -1,0 +1,233 @@
+/* ===== Variabel warna ===== */
+:root {
+  --pink: #ff8fb8;
+  --pink-soft: #ffe3ee;
+  --yellow: #ffd95e;
+  --mint: #8fe3c8;
+  --sky: #8cc8ff;
+  --lilac: #c7aaff;
+  --ink: #3b2a4d;
+  --paper: #fffaf3;
+  --radius: 22px;
+}
+
+/* ===== Reset & dasar ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+body {
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background-color: var(--pink-soft);
+  /* Polkadot tiga warna dari radial-gradient berlapis */
+  background-image:
+    radial-gradient(circle, var(--pink) 0 9px, transparent 10px),
+    radial-gradient(circle, var(--yellow) 0 7px, transparent 8px),
+    radial-gradient(circle, var(--sky) 0 6px, transparent 7px);
+  background-size: 64px 64px;
+  background-position: 0 0, 32px 32px, 32px 0;
+}
+
+h1, h2, h3, nav, .btn, .tag { font-family: "Fredoka", system-ui, sans-serif; }
+p { max-width: 62ch; }
+a { color: var(--ink); text-decoration-color: var(--pink); text-decoration-thickness: 3px; text-underline-offset: 3px; }
+:focus-visible { outline: 4px solid var(--ink); outline-offset: 3px; }
+
+.wrap { max-width: 940px; margin: 0 auto; padding: 0 20px; }
+
+/* ===== Navbar ===== */
+.site-header { position: sticky; top: 10px; z-index: 10; padding: 0 12px; }
+
+nav {
+  max-width: 940px; margin: 0 auto; padding: 8px 18px;
+  display: flex; justify-content: space-between; align-items: center; gap: 8px 12px; flex-wrap: wrap;
+  background: var(--paper);
+  border: 3px solid var(--ink); border-radius: 999px;
+  box-shadow: 0 5px 0 var(--ink);
+}
+nav .brand { font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+nav ul { display: flex; gap: 6px; list-style: none; flex-wrap: wrap; }
+nav ul a {
+  display: block; text-decoration: none; font-weight: 500; font-size: .95rem;
+  padding: 4px 12px; border-radius: 999px;
+}
+nav ul li:nth-child(1) a:hover { background: var(--pink); }
+nav ul li:nth-child(2) a:hover { background: var(--yellow); }
+nav ul li:nth-child(3) a:hover { background: var(--mint); }
+nav ul li:nth-child(4) a:hover { background: var(--sky); }
+nav ul li:nth-child(5) a:hover { background: var(--pink); }
+nav ul li:nth-child(6) a:hover { background: var(--lilac); }
+
+/* ===== Hero ===== */
+#home { padding: 80px 0 24px; text-align: center; }
+
+.hero-card {
+  display: inline-block; max-width: 640px; padding: 40px 36px;
+  background: var(--paper);
+  border: 3px solid var(--ink); border-radius: 36px;
+  box-shadow: 10px 10px 0 var(--ink);
+}
+.hello {
+  display: inline-block; margin-bottom: 14px; padding: 4px 16px;
+  background: var(--yellow);
+  border: 3px solid var(--ink); border-radius: 999px;
+  font-family: "Fredoka", sans-serif; font-weight: 600;
+  transform: rotate(-3deg);
+}
+#home h1 { font-size: clamp(2.3rem, 7vw, 4rem); line-height: 1.05; margin-bottom: 12px; }
+#home .role { margin: 0 auto 26px; }
+
+/* ===== Tombol ===== */
+.btn {
+  display: inline-block; margin: 4px 6px; padding: 10px 24px;
+  background: var(--pink); color: var(--ink);
+  border: 3px solid var(--ink); border-radius: 999px;
+  box-shadow: 0 4px 0 var(--ink);
+  font-weight: 600; text-decoration: none;
+  transition: transform .12s, box-shadow .12s;
+}
+.btn.alt { background: var(--mint); }
+.btn:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--ink); }
+
+/* ===== Kartu section ===== */
+.panel {
+  margin: 48px 0; padding: 36px 32px;
+  background: var(--paper);
+  border: 3px solid var(--ink); border-radius: var(--radius);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+.panel h2 {
+  display: inline-block; margin-bottom: 24px; padding: 2px 20px;
+  font-size: 1.7rem;
+  border: 3px solid var(--ink); border-radius: 999px;
+  transform: rotate(-2deg);
+}
+#about h2 { background: var(--pink); }
+#skills h2 { background: var(--yellow); }
+#experience h2 { background: var(--mint); }
+#projects h2 { background: var(--sky); }
+#achievement h2 { background: var(--pink); }
+#contact h2 { background: var(--lilac); }
+
+/* ===== Tentang ===== */
+.about { display: grid; grid-template-columns: 180px 1fr; gap: 32px; align-items: center; }
+.photo {
+  width: 180px; height: 180px; overflow: hidden;
+  display: grid; place-items: center; text-align: center;
+  background: var(--lilac);
+  border: 3px solid var(--ink); border-radius: 50%;
+  box-shadow: 5px 5px 0 var(--ink);
+  font-family: "Fredoka", sans-serif;
+}
+.photo img { width: 100%; height: 100%; object-fit: cover; }
+.photo.no-photo img { display: none; }
+.photo.no-photo::after { content: "Foto kamu"; }
+
+/* Data identitas (Nama, NIM, Prodi, dst.) */
+.identity {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px 20px; margin-top: 20px;
+}
+.identity dt { font-family: "Fredoka", sans-serif; font-weight: 600; font-size: .85rem; }
+.identity dd { font-size: .98rem; line-height: 1.4; }
+
+/* ===== Kemampuan ===== */
+.skills { display: flex; flex-wrap: wrap; gap: 12px; }
+.tag {
+  padding: 6px 18px;
+  border: 3px solid var(--ink); border-radius: 999px;
+  box-shadow: 0 3px 0 var(--ink);
+  font-weight: 500;
+}
+.tag:nth-child(5n+1) { background: var(--pink); }
+.tag:nth-child(5n+2) { background: var(--yellow); }
+.tag:nth-child(5n+3) { background: var(--mint); }
+.tag:nth-child(5n+4) { background: var(--sky); }
+.tag:nth-child(5n+5) { background: var(--lilac); }
+
+/* ===== Timeline pengalaman ===== */
+.timeline { list-style: none; position: relative; padding-left: 36px; }
+.timeline::before {
+  content: ""; position: absolute; left: 11px; top: 6px; bottom: 6px;
+  border-left: 4px dotted var(--ink);
+}
+.timeline li { position: relative; margin-bottom: 26px; }
+.timeline li::before {
+  content: ""; position: absolute; left: -36px; top: 5px;
+  width: 24px; height: 24px;
+  border: 3px solid var(--ink); border-radius: 50%;
+}
+.timeline li:nth-child(4n+1)::before { background: var(--pink); }
+.timeline li:nth-child(4n+2)::before { background: var(--yellow); }
+.timeline li:nth-child(4n+3)::before { background: var(--mint); }
+.timeline li:nth-child(4n+4)::before { background: var(--sky); }
+.timeline h3 { font-size: 1.15rem; }
+.timeline .date { font-weight: 700; font-size: .9rem; }
+
+/* ===== Project & Achievement (kartu) ===== */
+.projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; }
+
+/* Achievement: kartu selalu rata tengah, berapa pun jumlahnya */
+.achievements { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+.achievement { flex: 0 1 280px; }
+
+.project,
+.achievement {
+  display: flex; flex-direction: column; gap: 10px; padding: 22px;
+  border: 3px solid var(--ink); border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.project:nth-child(4n+1),
+.achievement:nth-child(4n+1) { background: var(--pink-soft); transform: rotate(-1deg); }
+.project:nth-child(4n+2),
+.achievement:nth-child(4n+2) { background: #fff3c4; transform: rotate(1deg); }
+.project:nth-child(4n+3),
+.achievement:nth-child(4n+3) { background: #d9f6ec; transform: rotate(-.5deg); }
+.project:nth-child(4n+4),
+.achievement:nth-child(4n+4) { background: #dcedff; transform: rotate(1deg); }
+.project h3,
+.achievement h3 { font-size: 1.2rem; }
+.project .stack { font-weight: 700; font-size: .85rem; }
+.project .links,
+.achievement .links {
+  display: flex; gap: 16px; margin-top: auto;
+  font-family: "Fredoka", sans-serif; font-weight: 500;
+}
+
+/* Detail khusus Achievement: tahun sebagai lencana, penyelenggara tebal */
+.achievement .year {
+  align-self: flex-start; padding: 2px 14px;
+  background: var(--paper);
+  border: 3px solid var(--ink); border-radius: 999px;
+  font-family: "Fredoka", sans-serif; font-weight: 600; font-size: .9rem;
+}
+.achievement .org { font-weight: 700; font-size: .9rem; }
+
+/* ===== Kontak & footer ===== */
+.contact-intro { margin-bottom: 16px; }
+.contact-list { list-style: none; display: grid; gap: 8px; margin-bottom: 20px; }
+#contact .btn { margin-left: 0; }
+
+footer {
+  padding: 24px 20px 40px; text-align: center;
+  font-family: "Fredoka", sans-serif; font-weight: 500;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 640px) {
+  nav { justify-content: center; border-radius: 28px; }
+  #home { padding-top: 56px; }
+  .hero-card { padding: 28px 20px; }
+  .panel { padding: 26px 20px; }
+  .about { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .projects { grid-template-columns: 1fr; }
+  .achievement { flex-basis: 100%; }
+}
+
+/* ===== Kurangi gerakan ===== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
